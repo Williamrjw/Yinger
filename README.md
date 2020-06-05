@@ -16,6 +16,7 @@ with:
 - [x] addiu
 - [x] ori
 - [x] xori
+- [x] sltu
 - [ ] jr
 - [ ] jal
 - [ ] etc.
