@@ -40,6 +40,14 @@ alu_res<=alu_src1^alu_src2;//////////////////////////随便选的一个alu ct 如果要改
 //NOR:
 4'b0100:
 alu_res<=~(alu_src1|alu_src2);//////////////////////////随便选的一个alu ct 如果要改这里，还要改aluct文件里的这个值
+//SLTU
+4'b1000:
+begin
+if (alu_src1<alu_src2)
+    alu_res<=1;
+else
+    alu_res<=0;
+end//////////////////////////随便选的一个alu ct 如果要改这里，还要改aluct文件里的这个值
 default: alu_res = 32'b0;
 endcase
 end

@@ -37,7 +37,7 @@ assign inst_andi = (!ct_inst[5])&&(!ct_inst[4])&&(ct_inst[3])&&(ct_inst[2])&&(!c
 assign inst_ori = (!ct_inst[5])&&(!ct_inst[4])&&(ct_inst[3])&&(ct_inst[2])&&(!ct_inst[1])&&(ct_inst[0]);
 assign inst_xori = (!ct_inst[5])&&(!ct_inst[4])&&(ct_inst[3])&&(ct_inst[2])&&(ct_inst[1])&&(!ct_inst[0]);
 assign funct = inst_r?aluct_inst:(inst_addiu?6'b100001:inst_andi?6'b100100:inst_ori?6'b100101:inst_xori?6'b100110:6'b000000);
-//assign inst_jr = inst_r&(aluct_inst==6'b001000);///////////////////////////////////////////2020/05/30
+//assign inst_jr = inst_r&(aluct_inst==6'b001000);
 //»òÕó
 assign ct_rf_dst = rst?inst_r:0;
 assign ct_rf_wen = rst?inst_r || inst_lw||inst_addiu||inst_andi||inst_ori||inst_xori:0;
